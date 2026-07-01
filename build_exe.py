@@ -23,7 +23,8 @@ def main():
         print("PyInstaller is already installed.")
     except ImportError:
         print("Installing PyInstaller...")
-        pip_path = os.path.join(".venv", "Scripts", "pip") if os.path.exists(os.path.join(".venv", "Scripts", "pip")) else "pip"
+        pip_ext = ".exe" if sys.platform == "win32" else ""
+        pip_path = os.path.join(".venv", "Scripts", f"pip{pip_ext}") if os.path.exists(os.path.join(".venv", "Scripts", f"pip{pip_ext}")) else f"pip{pip_ext}"
         if not run_command([pip_path, "install", "pyinstaller"]):
             print("Failed to install PyInstaller. Exiting.")
             sys.exit(1)
@@ -31,7 +32,8 @@ def main():
     # 2. Build the PyInstaller command
     # We use --onedir (folder mode) for faster startups and better antivirus compatibility,
     # and --noconsole to hide the command prompt window.
-    pyinstaller_bin = os.path.join(".venv", "Scripts", "pyinstaller") if os.path.exists(os.path.join(".venv", "Scripts", "pyinstaller")) else "pyinstaller"
+    pyinstaller_ext = ".exe" if sys.platform == "win32" else ""
+    pyinstaller_bin = os.path.join(".venv", "Scripts", f"pyinstaller{pyinstaller_ext}") if os.path.exists(os.path.join(".venv", "Scripts", f"pyinstaller{pyinstaller_ext}")) else f"pyinstaller{pyinstaller_ext}"
     
     cmd = [
         pyinstaller_bin,
