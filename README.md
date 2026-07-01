@@ -29,7 +29,7 @@
 
 ### 1. Clone and Navigate
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/abhishekabramaina/AIbal.git
 cd AIbal
 ```
 
