@@ -1,0 +1,21 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Application Data & Models
+config.json
+models/
+
+# IDE and System Files
+.idea/
+.vscode/
+.gemini/
+.system_generated/
+*.log
