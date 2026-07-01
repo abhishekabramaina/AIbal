@@ -1,7 +1,9 @@
 import json
 import os
 
-SETTINGS_FILE = "config.json"
+from src.utils import get_app_data_dir
+
+SETTINGS_FILE = os.path.join(get_app_data_dir(), "config.json")
 
 DEFAULT_SETTINGS = {
     "blink_target_interval": 6.0,  # seconds before screen starts to blur

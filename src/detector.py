@@ -5,9 +5,11 @@ import urllib.request
 import mediapipe as mp
 from PySide6.QtCore import QThread, Signal
 
+from src.utils import get_app_data_dir
+
 # Download URL for the face landmarker model
 MODEL_URL = "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task"
-MODEL_DIR = "models"
+MODEL_DIR = os.path.join(get_app_data_dir(), "models")
 MODEL_PATH = os.path.join(MODEL_DIR, "face_landmarker.task")
 
 class BlinkDetector(QThread):
