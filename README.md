@@ -1,4 +1,4 @@
-# AIbal 👁️
+# Aibal 👁️
 
 **AIbal** is a smart desktop application designed to prevent eye strain and dry eyes for software engineers. It monitors your blink rate in the background using your webcam and gently blurs the screen if you go too long without blinking, triggering your natural blink reflex.
 
